@@ -1,36 +1,31 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Salam Web Application Project
 
-## Getting Started
+## Config
 
-First, run the development server:
+create .env file just like .env.sample and put your db url
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Commands
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+look package.json for default commands
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Custom Commands
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### `npx drizzle-kit generate`
 
-## Learn More
+generates migrations
 
-To learn more about Next.js, take a look at the following resources:
+### `npx drizzle-kit migrate`
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+pushes migrations to db
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### `npx drizzle-kit push`
 
-## Deploy on Vercel
+force pushes db code changes to db
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### `npx drizzle-kit studio`
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+opens drizzle db viewer
+
+### `bun ./src/lib/drizzle/dbml.ts`
+
+generates db dbml file
